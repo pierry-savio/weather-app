@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: white;
+}
+
+:root {
+    --color-glass: rgba(255, 255, 255, 0.3);
+    --color-black-glass: rgba(70, 70, 70, 0.2);
+    --color-black-shadow: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image:
+        linear-gradient(rgba(0, 38, 50, 0.5), rgba(0, 7, 8, 0.5)),
+        url("./img/landscape.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    gap: 30px;
+
+
+}
+    
+
+.main-div {
+    background: var(--color-black-shadow);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    box-shadow: 0 4px 6px var(--color-black-shadow);
+    padding: 25px;
+
+    width: 600px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.image-and-humidity-div {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-and-search-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.weather-icon {
+    width: 80px;
+    height: auto;
+}
+
+.city-input {
+
+    height: 60px;
+    width: 400px;
+    max-width: 400px;
+
+    border: none;
+    outline: none;
+    padding: 15px;
+    background: var(--color-glass);
+    /* Cor branca semitransparente */
+    backdrop-filter: blur(10px);
+    /* Desfoque do fundo */
+    border-radius: 25px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 6px var(--color-black-shadow);
+    /* Sombra suave */
+}
+
+.city-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    /* branco mais suave (opcional) */
+}
+
+.search-button {
+    border: none;
+    outline: nome;
+    padding: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    cursor: pointer;
+
+    background: var(--color-glass);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    box-shadow: 0 4px 6px var(--color-black-shadow);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.search-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(115, 115, 115, 0.2);
+}
+
+.search-button:active {
+    transform: scale(0.9);
+}
+
+.temperature {
+    font-size: 100px;
+    font-weight: 1000;
+    background: linear-gradient(180deg, rgba(0, 234, 255, 0.9), rgba(255, 255, 255, 0.9));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.weather-description{
+    text-transform: capitalize;
+}
+
+.pierry-mark{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: gray;
+}
+
+.contact-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.github-button{
+
+    border: none;
+    outline: none;
+
+    border-radius: 50px;
+    padding: 10px;
+
+    height: 45px;
+    width: 45px;
+    background-image: url("./img/contact/github-ico.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    opacity: 30%;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.github-button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(115, 115, 115, 0.2);
+}
+
+.github-button:active {
+    transform: scale(0.9);
+}
+
+.linkedin-button{
+
+    border: none;
+    outline: none;
+
+    border-radius: 50px;
+    padding: 10px;
+
+    height: 45px;
+    width: 45px;
+    
+    background-image: url("./img/contact/linkedin-ico.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    opacity: 30%;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.linkedin-button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(115, 115, 115, 0.2);
+}
+
+.linkedin-button:active {
+    transform: scale(0.9);
+}
+
+.call-button{
+
+    border: none;
+    outline: none;
+
+    border-radius: 50px;
+    padding: 10px;
+
+    height: 45px;
+    width: 45px;
+    
+    background-image: url("./img/contact/call-ico.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    opacity: 30%;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.call-button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(115, 115, 115, 0.2);
+}
+
+.call-button:active {
+    transform: scale(0.9);
+}
+
+.made-by-and-contact-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

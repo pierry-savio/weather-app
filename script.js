@@ -1,5 +1,6 @@
 
 const key = "3793cfbe19689eb5d0b4e0f611a943d0";
+let  music = false;
 
 function setNewData(data){
     document.querySelector(".city-title").innerHTML = "Weather in " + data.name;
@@ -22,6 +23,8 @@ async function getCity(inputCity){
 }
 
 function buttonPressed(){
+    buttonPressedSound();
+    
     const inputCity = document.querySelector(".city-input").value;
     
     if(inputCity == ""){
@@ -30,37 +33,47 @@ function buttonPressed(){
     else{
         getCity(inputCity);
     }
-    const sound = document.getElementById("clickSound");
-    sound.currentTime = 0;
-    sound.play();
 }
 
 function githubPressed(){
+    buttonPressedSound();
     window.open("https://github.com/pierry-savio", "_blank");
-    const sound = document.getElementById("clickSound");
-    sound.currentTime = 0;
-    sound.play();
 }
 
 function linkedinPressed(){
+    buttonPressedSound();
     window.open("https://www.linkedin.com/in/pierry-dev/", "_blank");
-    const sound = document.getElementById("clickSound");
-    sound.currentTime = 0;
-    sound.play();
 }
 
 function callPressed(){
+    buttonPressedSound();
 
     const number = "5511986294195";
 
     window.open(`https://wa.me/${number}?text=Ol%C3%A1%21`, "_blank");
-    const sound = document.getElementById("clickSound");
-    sound.currentTime = 0;
-    sound.play();
+    
 }
 
-window.onload = () => {
-    const sound = document.getElementById("lofi-music");
+function musicButtonPressed(){
+    buttonPressedSound();
+
+    const audio = document.getElementById("bg-music");
+
+    if (music == true){
+        document.querySelector(".music-button").src = "./img/music-off.png";
+        audio.pause(); // para música
+        music = false;
+    }
+    else{
+        document.querySelector(".music-button").src = "./img/music-on.png";
+        audio.play(); // para música
+        music = true;
+    }
+    console.log(music);
+}
+
+function buttonPressedSound(){
+    let sound = document.getElementById("clickSound");
     sound.currentTime = 0;
     sound.play();
 }

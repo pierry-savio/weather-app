@@ -2,8 +2,6 @@
 # ⛅ Weather App
 [Weather App](https://pierry-savio.github.io/weather-app/) is a website where you can obtain information about the weather in a specific region through a real-time API.
 
-![Preview](./img/preview.png)
-
  👉 [Click here](https://pierry-savio.github.io/weather-app/) to acess the website 👈
 
 
